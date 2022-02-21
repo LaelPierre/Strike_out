@@ -10,9 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_02_21_222847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "duration"
+    t.integer "price"
+    t.bigint "client_id", null: false
+    t.bigint "striker_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_bookings_on_client_id"
+    t.index ["striker_id"], name: "index_bookings_on_striker_id"
+  end
+
+  create_table "strikers", force: :cascade do |t|
+    t.string "war_tag"
+    t.text "description"
+    t.integer "price"
+    t.bigint "renter_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["renter_id"], name: "index_strikers_on_renter_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "bookings", "strikers"
+  add_foreign_key "bookings", "users", column: "client_id"
+  add_foreign_key "strikers", "users", column: "renter_id"
 end

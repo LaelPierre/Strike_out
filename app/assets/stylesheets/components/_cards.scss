@@ -1,0 +1,18 @@
+.cards-strikers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-image {
+  background-size: contain;
+  background-position: center;
+  height: 298.50px;
+  width: 298.50px;
+  border-radius: 15px;
+}
+.card-content-text {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+}

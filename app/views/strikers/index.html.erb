@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Strikers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>war_tag</th>
+      <th>description</th>
+      <th>price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @strikers.each do |striker| %>
+      <tr>
+        <td><%= striker.war_tag %></td>
+        <td><%= striker.description %></td>
+        <td><%= striker.price %></td>
+        <td><%= link_to 'Show', striker %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -8,5 +8,4 @@ class User < ApplicationRecord
   has_many :bookings, foreign_key: :client_id
 
   validates :username, presence: true, uniqueness: true
-  validates :encrypted_password, length: { minimum: 5, maximum: 20 }
 end

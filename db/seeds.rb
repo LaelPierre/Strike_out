@@ -14,7 +14,7 @@ Striker.destroy_all
 10.times do
   Striker.create!(
     renter_id: 1,
-    war_tag: Faker::Beer.name,
+    war_tag: Faker::Beer.unique.name,
     description: Faker::ChuckNorris.fact,
     price: rand(50..100)
   )

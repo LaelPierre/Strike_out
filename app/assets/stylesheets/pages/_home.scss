@@ -1,31 +1,40 @@
 /* landing page banner */
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 80px 0px;
+  background-color: white;
+  text-align: center;
+  padding: 60px;
+  height: calc(100vh - 48px);
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 50px;
+}
+
+/* banner action */
+.btn-light {
+  opacity: 80%;
+  border-radius: 10px;
+}
+
+/* loactions h2 */
+.locations-h2 {
+  margin-left: 30px;
 }
 
 /* Below banner page info */
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card-category {
@@ -33,7 +42,7 @@
   background-position: center;
   height: 180px;
   display: flex;
-  justify-content: space;
+  justify-content: center;
   align-items: center;
   color: white;
   font-size: 24px;
@@ -68,24 +77,35 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 /* find your striker h2 */
 .Top-of-box-heading {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  font-size: 50px;
 }
 
+/* Striker banner */
+#striker-banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 50px 10px 70px 10px;
+  border-radius: 6px;
+  background-color: white;
+  height: 500px;
+}
 /* Home page strike boxes */
 .card-trip {
   overflow: hidden;

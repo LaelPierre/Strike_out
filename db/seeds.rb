@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+10.times do
+  Striker.create!(
+    renter_id: 1,
+    war_tag: Faker::Beer.name,
+    description: Faker::ChuckNorris.fact,
+    price: rand(50..100)
+  )
+end
+puts "all good 10 strikers created"

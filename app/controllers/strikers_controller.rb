@@ -6,7 +6,6 @@ class StrikersController < ApplicationController
   end
 
   def show
-    @striker = Striker.new
   end
 
   def new

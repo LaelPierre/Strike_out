@@ -14,15 +14,16 @@ class StrikersController < ApplicationController
 
   def create
     @striker = Striker.new(striker_params)
-
+    @striker.renter = current_user
     if @striker.save
-      redirect_to @striker, notice: 'striker was successfully created.'
+      redirect_to striker_path(@striker), notice: 'striker was successfully created.'
     else
       render :new
     end
   end
 
   def my_strikers
+    @striker = Striker.where(params[:renter_id])
   end
 
   def destroy

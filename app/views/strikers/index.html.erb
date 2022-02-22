@@ -2,26 +2,26 @@
 
 <h1>Strikers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>war_tag</th>
-      <th>description</th>
-      <th>price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="container">
+  <div class="cards-strikers">
     <% @strikers.each do |striker| %>
-      <tr>
-        <td><%= striker.war_tag %></td>
-        <td><%= striker.description %></td>
-        <td><%= striker.price %></td>
-        <td><%= link_to 'Show', striker %></td>
-      </tr>
+      <div class="card-striker">
+        <div class="card-image">
+          <%= image_tag("communist.png", class: "card-image") %>
+        </div>
+        <div class="card-content">
+          <div class="card-content-text">
+          <b><%= striker.war_tag %></b>
+          <%= striker.price %>
+          </div>
+          <div class="card-content-description">
+          <%= striker.description.truncate(42, separator: ' ') %>
+          <br>
+          <%= link_to 'Show', striker %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  </div>
+</div>

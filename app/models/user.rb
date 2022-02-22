@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :strikers, foreign_key: :renter_id
   has_many :bookings, foreign_key: :client_id
+
+  validates :username, presence: true, uniqueness: true
 end

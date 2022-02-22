@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+# Clean the DB
+Striker.destroy_all
+
+# Populate the DB with 10 strikers
 10.times do
   Striker.create!(
     renter_id: 1,

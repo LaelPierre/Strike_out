@@ -5,10 +5,10 @@
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  margin: 0px 0px 80px 0px;
+  margin: 0px 0px 50px 0px;
   background-color: white;
   text-align: center;
-  padding: 60px;
+  padding: 90px;
   height: calc(100vh - 48px);
 }
 
@@ -26,9 +26,22 @@
   border-radius: 10px;
 }
 
+.btn-light:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
 /* loactions h2 */
 .locations-h2 {
-  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 7px;
+}
+
+.locations-h2, h2{
+  font-size: 40px;
+  font-weight: 400;
 }
 
 /* Below banner page info */
@@ -116,55 +129,4 @@
   font-size: 50px;
   font-weight: bold;
   opacity: 60%;
-}
-/* Home page strike boxes */
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 30%;
-  border-radius: 6px;
-  height: auto;
-  display: grid;
-  margin: 10px;
-}
-
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  flex-direction: row;
-}
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
-.home-page-cards {
-  display: flex;
-  justify-content: space-between;
 }

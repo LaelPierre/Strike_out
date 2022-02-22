@@ -9,6 +9,9 @@ require 'faker'
 
 # Clean the DB
 Striker.destroy_all
+User.destroy_all
+
+User.create!(email: "test@test.com", password: "123456", username: "test")
 
 # Populate the DB with 10 strikers
 10.times do

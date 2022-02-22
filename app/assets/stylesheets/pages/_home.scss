@@ -94,6 +94,10 @@
 }
 
 /* Striker banner */
+.find-your-striker-banner {
+  display: flex;
+  justify-content: center;
+}
 #striker-banner {
   background-size: cover;
   background-position: center;
@@ -102,9 +106,16 @@
   align-items: center;
   color: white;
   margin: 50px 10px 70px 10px;
-  border-radius: 6px;
+  border-radius: 12px;
   background-color: white;
-  height: 500px;
+  height: 200px;
+  width: 50%;
+}
+
+.striker-h2 {
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 60%;
 }
 /* Home page strike boxes */
 .card-trip {

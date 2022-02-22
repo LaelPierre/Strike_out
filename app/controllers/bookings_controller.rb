@@ -11,11 +11,7 @@ class BookingsController < ApplicationController
     @booking.striker = @striker
     @booking.duration = (@booking.end_date - @booking.start_date).to_i
     @booking.price = @striker.price * @booking.duration
-    if @booking.save
-      redirect_to my_bookings_path, notice: 'Booking created.'
-    else
-      render :new
-    end
+    @booking.save
   end
 
   private

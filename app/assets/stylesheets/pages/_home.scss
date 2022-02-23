@@ -30,12 +30,14 @@ body {
 .btn-light {
   opacity: 80%;
   border-radius: 10px;
+  background-color: #FF3947;
+  border: 1px solid #FF3947;
 }
 
 .btn-light:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid black;
+  background-color: #FF3947;
+  color: black;
+  border: 1px solid #FF3947;
 }
 
 /* loactions h2 */

@@ -3,6 +3,4 @@ class Striker < ApplicationRecord
 
   validates :description, :price, :war_tag, presence: true
   validates :war_tag, uniqueness: true
-
-  has_many_attached :photos
 end

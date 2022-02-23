@@ -1,0 +1,10 @@
+<h1><%= current_user.username %>'s bookings</h1>
+
+<% current_user.bookings.each do |booking| %>
+  <li> Start the: <%= booking.start_date %> </li>
+  <li> End the: <%= booking.end_date %> </li>
+  <li> During <%= booking.duration %> day(s) </li>
+  <li> Striker's price <%= booking.striker.price %> </li>
+  <li> Total price:  <%= booking.striker.price %> * <%= booking.duration %> = <%= booking.price %> <i class="fab fa-bitcoin"></i></li>
+  <li> With: <%= booking.striker.war_tag %> </li>
+<% end %>

@@ -38,6 +38,6 @@ class StrikersController < ApplicationController
   end
 
   def striker_params
-    params.require(:striker).permit(:war_tag, :description, :price, photos: [])
+    params.require(:striker).permit(:war_tag, :description, :price)
   end
 end

@@ -1,0 +1,53 @@
+/* avatar for show page */
+
+.profile-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.show-avatar {
+  width: 200px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 30px;
+  border-bottom: 1px solid lightgrey;
+}
+
+h2 {
+  font-size: large;
+  align-self: flex-end;
+  margin-left: 20px;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  color: grey;
+}
+
+
+.striker-description {
+  display: flex;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 10px;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: #FF3947;
+  border: 1px solid #FF3947;
+}
+
+.btn:hover {
+  background-color: white;
+  border: 1px solid #FF3947;
+  color: #FF3947;
+}
+
+.button-flex {
+  display: flex;
+  align-items: flex-start;
+}

@@ -1,12 +1,15 @@
-<div class="container">
+<div class="container w-100" style="background-color:white">
   <div class="row">
-    <div class="col-6 offset-3">
-    <img class="show-avatar" src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=20&m=476085198&s=170667a&w=0&h=FXkT-N6vISLOCUefa9MyQg0pH-6loMX9zBZjgLK458c=" alt="Profile picture">
-      <h2><%= @striker.war_tag %></h2>
-      <p>Description: <%= @striker.description %></p>
-      <p>Price: <%= @striker.price %></p>
-
-      <%= link_to 'Back', strikers_path %>
+    <div class="col-6 offset-3 profile-content">
+      <img class="show-avatar" src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=20&m=476085198&s=170667a&w=0&h=FXkT-N6vISLOCUefa9MyQg0pH-6loMX9zBZjgLK458c=" alt="Profile picture">
+      <div class="striker-description">
+      <h1><%= @striker.war_tag %></h1>
+      <p><%= @striker.description %></p>
+      <h2>Daily Rate   <%= @striker.price %>$</h2>
+      </div>
+    </div>
+    <div class="button-flex">
+      <%= link_to 'Back', strikers_path, class: "btn btn-primary"%>
     </div>
   </div>
 </div>

@@ -9,7 +9,7 @@
       <p>Description: <%= @striker.description %></p>
       <p>Price: <%= @striker.price %></p>
       <% @striker.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag photo.key, height: 200, width: 200, crop: :fill %>
       <% end %>
 
 

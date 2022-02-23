@@ -1,4 +1,10 @@
 /* landing page banner */
+
+body {
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+}
+
 .banner {
   display: flex;
   justify-content: center;

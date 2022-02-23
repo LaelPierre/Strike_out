@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :update]
   end
   get "/my-strikers", to: "strikers#my_strikers"
-  # get '/my-bookings', to: 'bookings#my_bookings'
+  get '/my-bookings', to: 'bookings#my_bookings'
 end

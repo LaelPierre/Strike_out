@@ -1,5 +1,6 @@
 class Striker < ApplicationRecord
   belongs_to :renter, class_name: 'User', foreign_key: :renter_id
+  has_many :bookings, dependent: :destroy
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 

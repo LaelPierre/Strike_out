@@ -15,7 +15,7 @@
       <li><%= booking.striker.war_tag %></li>
     </div>
     <div class="booking-image">
-       <%= cl_image_tag booking.striker.photos.first, height: 200, width: 200, crop: :fill %>
+       <%= cl_image_tag booking.striker.photos.first.key, height: 200, width: 200, crop: :fill %>
     </div>
     <hr>
   <% end %>

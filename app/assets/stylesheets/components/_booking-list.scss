@@ -5,7 +5,10 @@
   padding-left: 20px;
   padding-bottom: 20px;
 }
-
+.booking-list {
+  display: flex;
+  flex-direction: column;
+}
 
 .booking-list h2 {
   color: grey;
@@ -17,5 +20,9 @@
 
 .booking-list li {
   list-style-type: none;
+  padding-left: 20px;
+}
+
+.booking-image {
   padding-left: 20px;
 }

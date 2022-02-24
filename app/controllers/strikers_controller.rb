@@ -3,6 +3,15 @@ class StrikersController < ApplicationController
 
   def index
     @strikers = Striker.all
+
+    @markers = @strikers.geocoded.map do |striker|
+      {
+        lat: striker.latitude,
+        lng: striker.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { striker: striker }),
+        image_url: striker.photos
+      }
+    end
   end
 
   def show
@@ -38,6 +47,6 @@ class StrikersController < ApplicationController
   end
 
   def striker_params
-    params.require(:striker).permit(:war_tag, :description, :price)
+    params.require(:striker).permit(:war_tag, :description, :price, photos: [])
   end
 end

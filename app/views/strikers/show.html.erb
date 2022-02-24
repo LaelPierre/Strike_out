@@ -9,8 +9,12 @@
       </div>
     </div>
     <div class="button-flex">
-      <%= link_to 'Back', strikers_path, class: "back-button submit-btn submit"%>
-      <%= link_to 'Book Now', new_striker_booking_path(@striker), class: "book-now-button submit-btn submit"%>
+      <div class="button-start">
+        <%= link_to 'Back', strikers_path, class: "button btn btn-primary"%>
+      </div>
+      <div class="button-end">
+        <%= link_to 'Book Now', new_striker_booking_path(@striker), class: "button btn btn-primary"%>
+      </div>
     </div>
   </div>
 </div>

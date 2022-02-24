@@ -16,7 +16,7 @@ User.create!(email: "test@test.com", password: "123456", username: "test")
 # Populate the DB with 10 strikers
 10.times do
   Striker.create!(
-    renter_id: 1,
+    renter_id: User.first.id,
     war_tag: Faker::Beer.unique.name,
     description: Faker::ChuckNorris.fact,
     price: rand(50..100)

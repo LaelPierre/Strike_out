@@ -1,9 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="title" >Strikers</h1>
-
-
 <div class="container">
+<p id="notice"><%= notice %></p>
+  <h1 class="title" >Strikers</h1>
   <div class="cards-strikers">
     <% @strikers.each do |striker| %>
       <%= link_to striker_path(striker) do %>

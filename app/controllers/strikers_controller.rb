@@ -2,7 +2,12 @@ class StrikersController < ApplicationController
   before_action :set_striker, only: [:show, :destroy]
 
   def index
-    @strikers = Striker.all
+
+    if params[:query].present?
+      @strikers = Striker.near(params[:query], 50)
+    else
+      @strikers = Striker.all
+    end
 
     @markers = @strikers.geocoded.map do |striker|
       {

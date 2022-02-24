@@ -31,10 +31,3 @@
   data-mapbox-markers-value="<%= @markers.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-
-if user.avatar.attached?
-        image_tag user.avatar
-else
-        image_tag 'default_avatar.jpg'
-end

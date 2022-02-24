@@ -32,7 +32,7 @@ class StrikersController < ApplicationController
   end
 
   def my_strikers
-    @striker = Striker.where(params[:renter_id])
+    @strikers = Striker.where(params[:renter_id])
   end
 
   def destroy

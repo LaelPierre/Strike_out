@@ -20,6 +20,14 @@ class StrikersController < ApplicationController
   end
 
   def show
+    @markers = [
+      {
+        lat: @striker.latitude,
+        lng: @striker.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { striker: @striker }),
+        image_url: helpers.asset_url("protester.png")
+      }
+    ]
   end
 
   def new

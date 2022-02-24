@@ -15,7 +15,7 @@ User.create!(email: "test@test.com", password: "123456", username: "test")
 
 # Populate the DB with 10 strikers
 10.times do
-striker = Striker.create!(
+striker = Striker.new(
     renter_id: User.first.id,
     war_tag: Faker::Beer.unique.name,
     description: Faker::ChuckNorris.fact,
@@ -27,5 +27,6 @@ striker = Striker.create!(
   striker.photos.attach(io: file1, filename: 'test1_upload.png', content_type: 'image/png')
   striker.photos.attach(io: file2, filename: 'test2_upload.png', content_type: 'image/png')
   striker.photos.attach(io: file3, filename: 'test3_upload.png', content_type: 'image/png')
+  striker.save!
 end
 puts "all good 10 strikers created"

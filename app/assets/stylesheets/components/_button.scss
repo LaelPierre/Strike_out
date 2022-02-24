@@ -1,0 +1,27 @@
+.button {
+  opacity: 80%;
+  border-radius: 10px;
+  background-color: #FF3947;
+  border: 1px solid #FF3947;
+  margin-top: 100px;
+}
+
+.button:hover {
+  background-color: #FF3947;
+  color: black;
+  border: 1px solid #FF3947;
+  outline: 0;
+  transform: scale(.9);
+  opacity: .75;
+}
+
+.button-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-flex-center {
+  display: flex;
+  justify-content: center;
+}

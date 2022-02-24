@@ -6,22 +6,23 @@
 <div class="container">
   <div class="cards-strikers">
     <% @strikers.each do |striker| %>
-      <div class="card-striker">
-        <div class="card-image">
-          <%= cl_image_tag(striker.photos.first.key, class: "card-image", width: 100, height: 100, crop: :fill) %>
-        </div>
-        <div class="card-content">
-          <div class="card-content-text">
-          <b><%= striker.war_tag %></b>
-          <%= striker.price %>
+      <%= link_to striker_path(striker) do %>
+        <div class="card-striker">
+          <div class="card-image">
+            <%= cl_image_tag(striker.photos.first.key, class: "card-image", width: 100, height: 100, crop: :fill) %>
           </div>
-          <div class="card-content-description">
-          <%= striker.description.truncate(42, separator: ' ') %>
-          <br>
-          <%= link_to 'Show', striker %>
+          <div class="card-content">
+            <div class="card-content-text">
+              <b><%= striker.war_tag %></b>
+              <%= striker.price %>
+            </div>
+            <div class="card-content-description">
+              <%= striker.description.truncate(42, separator: ' ') %>
+              <br>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

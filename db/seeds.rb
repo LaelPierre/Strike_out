@@ -19,6 +19,7 @@ striker = Striker.new(
     renter_id: User.first.id,
     war_tag: Faker::Beer.unique.name,
     description: Faker::ChuckNorris.fact,
+    address: Faker::Address.street_address,
     price: rand(50..100)
   )
   file1 = URI.open('https://res.cloudinary.com/dcgubphgl/image/upload/v1645719448/development/yd54z8acvcqgelrlibebsgof8aku.jpg')

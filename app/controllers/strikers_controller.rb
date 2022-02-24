@@ -9,7 +9,7 @@ class StrikersController < ApplicationController
         lat: striker.latitude,
         lng: striker.longitude,
         info_window: render_to_string(partial: "info_window", locals: { striker: striker }),
-        image_url: striker.photos
+        image_url: helpers.asset_url("protester.png")
       }
     end
   end
@@ -47,6 +47,6 @@ class StrikersController < ApplicationController
   end
 
   def striker_params
-    params.require(:striker).permit(:war_tag, :description, :price, photos: [])
+    params.require(:striker).permit(:war_tag, :description, :address, :price, photos: [])
   end
 end

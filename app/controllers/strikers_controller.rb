@@ -38,7 +38,7 @@ class StrikersController < ApplicationController
     @striker = Striker.new(striker_params)
     @striker.renter = current_user
     if @striker.save
-      redirect_to striker_path(@striker), notice: 'striker was successfully created.'
+      redirect_to my_strikers_path, notice: 'striker was successfully created.'
     else
       render :new
     end

@@ -1,0 +1,14 @@
+<% current_user.strikers.each do |striker|%>
+  <% if striker.bookings.any? %>
+    <% striker.bookings.each do |booking| %>
+      <h2 style="margin-top:15px">Booking for: <%= striker.war_tag %></h2>
+      <p><%= booking.start_date %>/<%= booking.end_date %></p>
+      <p><%= booking.price %></p>
+      <p><%= booking.status %></p>
+      <%= simple_form_for booking, url: update_status_booking_path(booking) do |f| %>
+        <%= f.input :status, collection: Booking.statuses.map { |st| st }[1..] %>
+        <%= f.submit %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

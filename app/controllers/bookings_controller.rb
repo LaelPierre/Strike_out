@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:update]
+  before_action :set_booking, only: [:update, :update_status]
   before_action :set_striker, only: [:new, :create]
   def new
     @booking = Booking.new
@@ -19,7 +19,18 @@ class BookingsController < ApplicationController
   end
 
   def my_bookings
+  end
 
+  def owner_bookings
+  end
+
+  def update_status
+    new_status = params[:booking][:status].to_i
+    case new_status
+    when 1 then @booking.status_Accepted!
+    when 2 then @booking.status_Declined!
+    end
+    redirect_to my_owner_bookings_path
   end
 
   private

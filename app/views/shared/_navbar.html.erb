@@ -31,9 +31,11 @@
               <%= image_tag 'communist.png', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= current_user.username %>
               <%= link_to "My bookings", "/my-bookings", class: "dropdown-item" %>
               <hr>
               <%= link_to "Add a striker", "/strikers/new", class: "dropdown-item" %>
+              <%= link_to "My owner bookings", "/my-owner-bookings", class: "dropdown-item" %>
               <%= link_to "My strikers", "/my-strikers", class: "dropdown-item" %>
               <hr>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

@@ -2,12 +2,12 @@
   <h1 class="h1-properties mb-3">My Strikers</h1>
     <% @strikers.each do |s| %>
       <div class="striker-cards">
+        <%= cl_image_tag s.photos.first.key, height: 125, width: 125, crop: :fill, class: "image-border"%>
         <div class="striker-image-name-description">
-          <%= cl_image_tag s.photos.first.key, height: 125, width: 125, crop: :fill%>
           <div class="ms-3 war-tag">
             <h3><%= s.war_tag %></h3>
           </div>
-          <div class="striker-description">
+          <div class="striker-description-show">
             <p>Description: <%= s.description %></p>
           </div>
         </div>

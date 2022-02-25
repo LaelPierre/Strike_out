@@ -1,27 +1,45 @@
 .h1-properties {
-  color: #FF3947;
+  color: black;
+  text-align: center;
 }
 .striker-cards {
   display: flex;
-  flex-direction: column;
-  border: 1px solid #FF3947;
+  flex-direction: row;
+  border: 1px solid lightgrey;
   margin: 10px 0;
   border-radius: 15px;
   padding: 10px;
   background-color: white;
   color: black;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  justify-content: space-between;
   }
+
+.striker-image-name-description {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.war-tag {
+  min-width: 30%;
+  max-width: 30%;
+}
+
+.striker-description {
+  flex-grow: 1;
+  border-bottom: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
 
 .price-right {
   align-self: flex-end;
   color: white;
   background-color: #FF3947;
   border-radius: 4px;
-  width: 100px;
-  display: flex;
-  justify-content: center;
+  min-width: 116px;
   height: 40px;
-  align-items: center;
+  text-align: center;
+  margin-left: 10px;
 }

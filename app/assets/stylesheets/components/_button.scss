@@ -26,3 +26,28 @@
   display: flex;
   justify-content: center;
 }
+
+#login-btn {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 140px;
+  text-decoration: none;
+  color: white;
+}
+
+#login-btn-option {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  opacity: 55%;
+}
+
+#button-margin {
+  margin: 80px 79.5px 0 79.5px;
+}

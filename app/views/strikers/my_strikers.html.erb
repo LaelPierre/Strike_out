@@ -1,5 +1,19 @@
-<% @strikers.each do |s| %>
-  <h3>War_tag: <%= s.war_tag %></h3>
-  <p>Description: <%= s.description %></p>
-  <p>Price: <%= s.price %></p>
-<% end %>
+<div class="container">
+  <h1 class="h1-properties mb-3">My Strikers</h1>
+    <% @strikers.each do |s| %>
+      <div class="striker-cards">
+        <%= cl_image_tag s.photos.first.key, height: 125, width: 125, crop: :fill, class: "image-border"%>
+        <div class="striker-image-name-description">
+          <div class="ms-3 war-tag">
+            <h3><%= s.war_tag %></h3>
+          </div>
+          <div class="striker-description-show">
+            <p>Description: <%= s.description %></p>
+          </div>
+        </div>
+        <div class="price-right">
+          <p class="">Rate: <%= s.price %> $</p>
+        </div>
+      </div>
+    <% end %>
+</div>

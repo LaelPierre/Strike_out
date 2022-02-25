@@ -1,0 +1,10 @@
+<%= simple_form_for do |f| %>
+<h2>Accept or Decline booking</h2>
+  <div class="field">
+    <p><%= f.input :start_date %></p>
+    <p><%= f.input :end_date %></p>
+  </div>
+  <div class="button-flex-center">
+    <p class="button btn btn-primary"><span class="text"><%= f.button :submit %></span></p>
+  </div>
+<% end %>

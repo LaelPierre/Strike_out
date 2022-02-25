@@ -17,6 +17,13 @@
     <div class="booking-image">
        <%= cl_image_tag booking.striker.photos.first.key, height: 200, width: 200, crop: :fill %>
     </div>
+    <% if booking.status == "Accepted" %>
+      <p><strong>Your booking has been accepted! Let's fight!!!</strong> </p>
+    <% elsif booking.status == "Declined"%>
+      <p><strong>Sorry the owner declined your booking</strong></p>
+    <% else %>
+      <p><strong>Waiting for confirmation</strong></p>
+    <% end %>
     <hr>
   <% end %>
 </div>

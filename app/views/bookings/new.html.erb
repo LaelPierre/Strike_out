@@ -4,7 +4,11 @@
     <p><%= f.input :start_date %></p>
     <p><%= f.input :end_date %></p>
   </div>
-  <div class="button-flex-center">
-    <p class="button btn btn-primary"><span class="text"><%= f.button :submit %></span></p>
-  </div>
+  <div class="button-flex">
+      <div class="button-start">
+        <%= link_to 'Back', striker_path(@striker), class: "button btn btn-primary"%>
+      </div>
+      <div class="button-end">
+        <%=  f.button :submit, class: "button btn btn-primary"%>
+      </div>
 <% end %>

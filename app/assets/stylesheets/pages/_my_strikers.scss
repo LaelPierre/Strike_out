@@ -5,32 +5,31 @@
 .striker-cards {
   display: flex;
   flex-direction: row;
-  border: 1px solid lightgrey;
   margin: 10px 0;
   border-radius: 15px;
-  padding: 10px;
+  padding: 0 10px 0 0;
   background-color: white;
   color: black;
   justify-content: space-between;
+  box-shadow: 1px 1px 1px 1px lightgrey;
   }
 
 .striker-image-name-description {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .war-tag {
   min-width: 30%;
   max-width: 30%;
+  font-weight: 600;
 }
 
-.striker-description {
+.striker-description-show {
   flex-grow: 1;
-  border-bottom: 2px solid lightgrey;
-  border-left: 2px solid lightgrey;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
+  align-items: flex-start;
 }
 
 .price-right {
@@ -42,4 +41,9 @@
   height: 40px;
   text-align: center;
   margin-left: 10px;
+  padding: 0 0 15px 0;
+}
+
+.image-border {
+  border-radius: 15px 0 0 15px;
 }

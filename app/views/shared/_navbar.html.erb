@@ -7,15 +7,12 @@
 
     <div class="search-navbar">
       <%= form_tag strikers_path, method: :get do %>
-        <div>
+        <div class="search-field">
             <%= text_field_tag :query,
                 params[:query],
                 class: "form-control",
                 placeholder: "Find a striker"
               %>
-        </div>
-        <div>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>

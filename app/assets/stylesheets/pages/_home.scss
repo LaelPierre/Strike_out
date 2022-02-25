@@ -21,7 +21,7 @@ body {
 .banner h1 {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: .95;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 50px;
 }
@@ -30,12 +30,15 @@ body {
 .locations-h2 {
   display: flex;
   justify-content: center;
-  margin: 7px;
+  margin: 0;
 }
 
-.locations-h2, h2{
+.locations-h2 h2{
   font-size: 40px;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 40px;
+  border: none;
 }
 
 /* Below banner page info */

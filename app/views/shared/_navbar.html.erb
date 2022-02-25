@@ -5,12 +5,17 @@
       <p>AirStrike</p>
     <% end %>
 
-    <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" placeholder="Philipe Poutou"/>
-        <i class="fas fa-search"></i>
-      </div>
-    </form>
+    <div class="search-navbar">
+      <%= form_tag strikers_path, method: :get do %>
+        <div class="search-field">
+            <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a striker"
+              %>
+        </div>
+      <% end %>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,7 +32,10 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My bookings", "/my-bookings", class: "dropdown-item" %>
+              <hr>
+              <%= link_to "Add a striker", "/strikers/new", class: "dropdown-item" %>
               <%= link_to "My strikers", "/my-strikers", class: "dropdown-item" %>
+              <hr>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>

@@ -6,6 +6,7 @@
         <%= simple_form_for @striker do |f| %>
           <%= f.input :war_tag, placeholder: 'Choose your War tag' %>
           <%= f.input :description, placeholder: 'Describe yourself' %>
+          <%= f.input :address, placeholder: "Striker's address" %>
           <%= f.input :price, placeholder: 'Price your War' %>
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.submit class: 'btn btn-flat btn-primary' %>

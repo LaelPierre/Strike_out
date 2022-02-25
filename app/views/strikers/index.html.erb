@@ -1,25 +1,25 @@
 <div class="container">
-  <h1 class="title" >Strikers</h1>
-  <div class="cards-strikers">
-    <% @strikers.each do |striker| %>
-      <%= link_to striker_path(striker) do %>
-        <div class="card-striker">
-          <div class="card-image">
-              <%= cl_image_tag(striker.photos.first.key, class: "card-image", width: 100, height: 100, crop: :fill) %>
-          </div>
-          <div class="card-content">
-            <div class="card-content-text">
-              <b><%= striker.war_tag %></b>
-              <%= striker.price %>
+    <h1 class="h1-properties mb-3">Strikers</h1>
+      <% @strikers.each do |striker| %>
+      <div class="no-click">
+        <%= link_to striker_path(striker) do %>
+          <div class="striker-cards" id="striker_clickable">
+            <%= cl_image_tag striker.photos.first.key, width: 125, height: 125, crop: :fill, class: "image-border" %>
+            <div class="striker-image-name-description">
+              <div class="ms-3 war-tag">
+                <h3><%= striker.war_tag %></h3>
+              </div>
+              <div class="striker-description-show">
+                <p>Description: <%= striker.description %></p>
+              </div>
             </div>
-            <div class="card-content-description">
-              <%= striker.description.truncate(42, separator: ' ') %>
-              <br>
+            <div class="price-right">
+              <p class="">Rate: <%= striker.price %> $</p>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+      </div>
   </div>
 </div>
 <div style="width: 100%; height: 600px;"
